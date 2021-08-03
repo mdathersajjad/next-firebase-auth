@@ -1,9 +1,4 @@
 import React from 'react'
-import {
-  useAuthUser,
-  withAuthUser,
-  withAuthUserTokenSSR,
-} from 'next-firebase-auth'
 import Header from '../components/Header'
 import DemoPageLinks from '../components/DemoPageLinks'
 
@@ -17,7 +12,7 @@ const styles = {
 }
 
 const Demo = () => {
-  const AuthUser = useAuthUser()
+  const AuthUser = {}
   return (
     <div>
       <Header email={AuthUser.email} signOut={AuthUser.signOut} />
@@ -39,6 +34,4 @@ const Demo = () => {
   )
 }
 
-export const getServerSideProps = withAuthUserTokenSSR()()
-
-export default withAuthUser()(Demo)
+export default Demo
