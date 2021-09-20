@@ -9,6 +9,8 @@ import { verifyIdToken } from 'src/firebaseAdmin'
 
 import initFirebaseAdminSDK from 'src/initFirebaseAdminSDK'
 
+import { AuthUserContext } from 'src/useAuthUser'
+
 const initServer = (config) => {
   const clientInit = index.init(config)
   // We only initialize the Firebase admin SDK as it's needed. See:
@@ -33,4 +35,5 @@ export default {
   unsetAuthCookies,
   verifyIdToken,
   getFirebaseAdmin,
+  AuthUserContext,
 }

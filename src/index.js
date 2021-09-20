@@ -1,7 +1,7 @@
 /* eslint-disable global-require */
 import { setConfig } from 'src/config'
 import withAuthUserModule from 'src/withAuthUser'
-import useAuthUserModule from 'src/useAuthUser'
+import useAuthUserModule, { AuthUserContext } from 'src/useAuthUser'
 import initFirebaseClientSDK from 'src/initFirebaseClientSDK'
 import { setDebugEnabled } from 'src/logDebug'
 import isClientSide from 'src/isClientSide'
@@ -56,4 +56,5 @@ export default {
   verifyIdToken,
   AuthAction,
   getFirebaseAdmin,
+  AuthUserContext,
 }
